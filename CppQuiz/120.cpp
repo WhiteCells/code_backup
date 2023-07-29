@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+    int a = 10;
+    int b = 20;
+    int x, y;
+    x = a, b;
+    y = (a, b);
+    std::cout << x << ' ' << y; // 10 20
+}
