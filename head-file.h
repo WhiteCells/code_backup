@@ -20,6 +20,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <cmath>
+#include <string.h>
 
 // #include <bits/stdc++.h>
 
