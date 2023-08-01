@@ -17,7 +17,22 @@ void UseString() {
     std::cout << std::to_string(std::atoi(s1.c_str()) + std::atoi(s2.c_str()));
 }
 
+
+void StringReadRow() {
+    std::string s;
+    std::getline(std::cin, s); // read a row
+    std::cout << s << '\n';
+}
+
+
+void StringType() {
+    std::string s{ "hello" };
+    std::cout << typeid(s[0]).name() << ' ' << typeid(char).name() << '\n';
+}
+
 int main() {
-    UseString();
+    // UseString();
+    // StringReadRow();
+    StringType();
     return 0;
 }

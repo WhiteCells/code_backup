@@ -10,9 +10,17 @@ void TestWhile() {
     }
 }
 
+void TestWhile2() {
+    int i = 0;
+    while (--i) {
+        cout << "bug" << '\n';
+    }
+}
+
 
 int main() {
     TestWhile();
+    TestWhile2();
 }
 
 //https://ac.nowcoder.com/acm/contest/60282/B
