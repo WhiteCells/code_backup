@@ -108,9 +108,32 @@ void SetKeyOfPair() {
 
 }
 
+void SetInsert() {
+    std::set<int> s;
+    s.insert(7);
+    s.insert(9);
+    s.insert(8);
+    s.insert(6);
+    if (s.find(7) != s.end()) {
+        std::cout << *s.find(7) << '\n';
+    }
+}
+
+void SetCount() {
+    std::set<int> s;
+    s.insert(2);
+    s.insert(2);
+    s.insert(2);
+    s.insert(3);
+    s.insert(4);
+
+    std::cout << s.count(2) << '\n';
+}
+
 int main() {
     // UsedSet();
-    UseSetSort();
+    // UseSetSort();
     // Coordinate();
+    SetInsert();
     return 0;
 }
