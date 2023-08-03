@@ -67,9 +67,22 @@ void constgArray() {
     }
 }
 
+void foo2() {
+    int a[3]{ 1, 2, 3 };
+    int* p1 = &a[0];
+    int* p2 = &a[1];
+    int* p3 = &a[2];
+    std::cout << p1 << '\n';
+    std::cout << p2 << '\n';
+    std::cout << p2 - p1 << '\n';
+    std::cout << p3 - p1 << '\n';
+    std::cout << p2 - p3 << '\n';
+}
+
 int main() {
     // UseCArr();
     // FlagArrTest();
-    constgArray();
+    // constgArray();
+    foo2();
     return 0;
 }

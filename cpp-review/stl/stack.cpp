@@ -19,7 +19,21 @@ void UseStack() {
     }
 }
 
+void EmptyStack() {
+    std::stack<int> s;
+    std::cout << s.size() << ' ' << s.empty() << '\n';
+    s.pop();
+    std::cout << s.size() << ' ' << s.empty() << '\n';
+    s.pop();
+    std::cout << s.size() << ' ' << s.empty() << '\n';
+    s.pop();
+    std::cout << s.size() << ' ' << s.empty() << '\n';
+    s.pop();
+    std::cout << s.size() << ' ' << s.empty() << '\n';
+}
+
 int main() {
     UseStack();
+    EmptyStack();
     return 0;
 }

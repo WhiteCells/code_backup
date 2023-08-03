@@ -57,5 +57,5 @@
         "thread": "cpp"
     },
     "debug.toolBarLocation": "docked",
-    "C_Cpp.errorSquiggles": "enabled"
+    "C_Cpp.errorSquiggles": "disabled"
 }
