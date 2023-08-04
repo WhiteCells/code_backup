@@ -2,6 +2,8 @@
 
 #include <algorithm>
 
+#include <functional>
+
 // stl
 #include <vector>
 #include <string>
@@ -14,13 +16,16 @@
 #include <unordered_map>
 #include <list>
 #include <bitset>
+#include <array>
+
 
 // c
 #include <ctime>
 #include <cstdlib>
 #include <cstdio>
 #include <cmath>
-#include <string.h>
+#include <cstring>
+
 
 // #include <bits/stdc++.h>
 

@@ -54,8 +54,7 @@
         "ratio": "cpp",
         "future": "cpp",
         "mutex": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "cstring": "cpp"
     },
-    "debug.toolBarLocation": "docked",
-    "C_Cpp.errorSquiggles": "disabled"
 }

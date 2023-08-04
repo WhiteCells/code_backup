@@ -103,10 +103,29 @@ void ClassE() {
     E::d;
 }
 
+class F {
+private:
+    int a = 10;
+public:
+    int& fun() {
+        return a;
+    }
+    int GetA() {
+        return a;
+    }
+};
+
+void ClassF() {
+    F f;
+    f.fun() = 20;
+    std::cout << f.GetA() << '\n';
+}
+
 int main() {
     // PrintEmptyClassSize(); // 1
     // ClassC();
     // ClassD();
-    ClassE();
+    // ClassE();
+    ClassF();
     return 0;
 }
