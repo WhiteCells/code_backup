@@ -15,7 +15,7 @@
 #include <iostream>
 #include <bitset>
 
-int main() {
+int main(){
     std::bitset<4> b;
 
     std::cout << b << "\n";

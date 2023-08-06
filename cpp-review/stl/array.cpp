@@ -3,7 +3,7 @@
 
 #include <array>
 
-void ArrayInt() {
+void ArrayInt(){
     std::array<int, 10> a;
     // for (const auto& ele : a) {
     //     std::cout << ele << ' ';
@@ -11,13 +11,13 @@ void ArrayInt() {
     // std::cout << '\n';
 
     std::vector<std::array<int, 2>> va{ { 1, 2 }, { 2, 3 } };
-    for (auto& [x, y] : va) {
+    for(auto& [x, y] : va){
         std::cout << x << ' ' << y << ' ';
     }
 }
 
 
-int main() {
+int main(){
     ArrayInt();
     return 0;
 }
