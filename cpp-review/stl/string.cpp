@@ -27,12 +27,12 @@ void StringReadRow() {
 
 
 void StringType() {
-    std::string s{ "hello" };
+    std::string s { "hello" };
     std::cout << typeid(s[0]).name() << ' ' << typeid(char).name() << '\n';
 }
 
 void StringFind() {
-    std::string s{ "test*/int a" };
+    std::string s { "test*/int a" };
     std::string s2;
     if (s.find("*/") != std::string::npos) {
         s2 = std::string(s.begin() + s.find("*/") + 2, s.end());
@@ -49,10 +49,18 @@ void StringFind() {
     }
 }
 
+void InterceptString() {
+    std::string s = "hello";
+    if ("hel" == std::string(s.begin(), s.begin() + 3)) {
+        std::cout << "1" << '\n';
+    }
+}
+
 int main() {
     // UseString();
     // StringReadRow();
     // StringType();
-    StringFind();
+    // StringFind();
+    InterceptString();
     return 0;
 }

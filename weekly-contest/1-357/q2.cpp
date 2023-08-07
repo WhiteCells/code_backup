@@ -8,15 +8,15 @@
  * @Description:
 */
 
-class Solution{
+class Solution {
 public:
-    bool canSplitArray(vector<int>& nums, int m){
+    bool canSplitArray(vector<int>& nums, int m) {
         
     }
 };
 
 
-int main(){
+int main() {
     Solution s;
 
     return 0;

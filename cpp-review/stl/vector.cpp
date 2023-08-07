@@ -65,10 +65,24 @@ void VectorPair() {
     }
 }
 
+void fun(std::vector<int> v[], int n) {
+    for (int i = 0; i < n; ++i) {
+        for (auto& ele : v[i]) {
+            std::cout << ele << ' ';
+        }
+        std::cout << '\n';
+    }
+}
+
+void VectorArr() {
+    std::vector<int> v[3]{ { 1, 2, 3 }, { 2, 3, 4 }, { 3, 4, 5 } };
+    fun(v, 3);
+}
 
 int main() {
     // InitVector();
     // VectorBool();
-    VectorPair();
+    // VectorPair();
+    VectorArr();
     return 0;
 }
