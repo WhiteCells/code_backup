@@ -27,7 +27,7 @@ void UseCArr() {
 
     std::cout << '\n' << "-----------------" << '\n';
 
-    int arr3[100]{ 0 }; // 全部置为 0
+    int arr3[100] { 0 }; // 全部置为 0
     print(arr3, 100);
 
     std::cout << '\n' << "-----------------" << '\n';
@@ -59,7 +59,7 @@ void FlagArrTest() {
         std::cout << FlagArr[i] << ' ';
     }
 }
-const int gArray[1000]{ 1 };
+const int gArray[1000] { 1 };
 
 void constgArray() {
     for (int i = 0; i < 1000; ++i) {
@@ -68,21 +68,22 @@ void constgArray() {
 }
 
 void foo2() {
-    int a[3]{ 1, 2, 3 };
+    int a[3] { 1, 2, 3 };
     int* p1 = &a[0];
     int* p2 = &a[1];
     int* p3 = &a[2];
     std::cout << p1 << '\n';
     std::cout << p2 << '\n';
     std::cout << p2 - p1 << '\n';
-    std::cout << p3 - p1 << '\n';
+    std::cout << p3 - p1 << '\n'; // 移动的步长
     std::cout << p2 - p3 << '\n';
 }
+
 
 int main() {
     // UseCArr();
     // FlagArrTest();
     // constgArray();
-    foo2();
+    // foo2();
     return 0;
 }
