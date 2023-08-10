@@ -11,14 +11,14 @@ auto print = [&](const auto& v) {
 };
 
 void InitVector() {
-    std::vector<int> v1{ 1, 2, 3 };
+    std::vector<int> v1 { 1, 2, 3, };
     // std::vector<int> v = { 1, 2, 3 };
     print(v1);
 
-    auto v2 = std::vector<int>{ 1, 2, 3 };
+    auto v2 = std::vector<int> { 1, 2, 3 };
     print(v2);
 
-    std::vector<int> v3[2]{ { 1, 2, 3 }, { 2, 3, 4 } };
+    std::vector<int> v3[2] { { 1, 2, 3 }, { 2, 3, 4 } };
     for (int i = 0; i < 2; ++i) {
         print(v3[i]);
     }
@@ -30,7 +30,7 @@ void InitVector() {
 // 在使用std::vector<bool>时，需要注意它与其他类型的std::vector有所不同。
 // std::vector<bool> 被特化为压缩存储，以节省内存空间
 void VectorBool() {
-    std::vector<bool> v{ false, true, false, true };
+    std::vector<bool> v { false, true, false, true };
     print(v); // 0 1 0 1
 
     // for (auto& ele : v) { // 非常量引用的初始值必须为左值C/C++(461)
@@ -75,14 +75,29 @@ void fun(std::vector<int> v[], int n) {
 }
 
 void VectorArr() {
-    std::vector<int> v[3]{ { 1, 2, 3 }, { 2, 3, 4 }, { 3, 4, 5 } };
+    std::vector<int> v[3] { { 1, 2, 3 }, { 2, 3, 4 }, { 3, 4, 5 } };
     fun(v, 3);
+}
+
+void VectorVector() {
+    std::vector<std::vector<int>> v {
+        { 1, 2, 3 },
+        { 2, 3, 4 },
+        { 3, 4, 5 }, // 这里可以以 , 结尾
+    };
+    for (const auto& ele : v) {
+        for (const auto& val : ele) {
+            std::cout << val << ' ';
+        }
+        std::cout << '\n';
+    }
 }
 
 int main() {
     // InitVector();
     // VectorBool();
     // VectorPair();
-    VectorArr();
+    // VectorArr();
+    VectorVector();
     return 0;
 }
