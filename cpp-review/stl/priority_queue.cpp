@@ -65,7 +65,7 @@ void MinHeap() {
 
 int main() {
     UsePriorityQueue();
-    MaxHeap();
-    MinHeap();
+    // MaxHeap();
+    // MinHeap();
     return 0;
 }

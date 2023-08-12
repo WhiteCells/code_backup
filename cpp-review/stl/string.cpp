@@ -8,6 +8,14 @@ void UseString() {
     s.append("s");
     s.append("a");
     s.append("D");
+
+    const char* c_str = s.c_str();
+    for (const char* p = c_str; *p != '\0'; ++p) {
+        printf("%c", *p);
+    }
+    printf("\n");
+    printf("%s\n", c_str);
+
     int a = 1;
     // s.append(a); // append 参数 string
     s.push_back(a + '0');
@@ -15,7 +23,11 @@ void UseString() {
     std::string s1 = "123";
     std::string s2 = "11";
     const char* s3 = "123";
-    std::cout << std::to_string(std::atoi(s1.c_str()) + std::atoi(s2.c_str()));
+    std::cout << std::to_string(atoi(s1.c_str()) + atoi(s2.c_str()) + atoi(s3));
+
+    // string clear
+    s.clear();
+    s = "";
 }
 
 
@@ -57,10 +69,10 @@ void InterceptString() {
 }
 
 int main() {
-    // UseString();
+    UseString();
     // StringReadRow();
     // StringType();
     // StringFind();
-    InterceptString();
+    // InterceptString();
     return 0;
 }
