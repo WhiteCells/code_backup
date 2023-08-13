@@ -93,11 +93,19 @@ void VectorVector() {
     }
 }
 
+void VectorEqualSign() {
+    std::vector<int> v1 { 1, 2, 3 };
+    std::vector<int> v2 { 2, 3, 4 };
+    v2 = v1;
+    print(v2);
+}
+
 int main() {
     // InitVector();
     // VectorBool();
     // VectorPair();
     // VectorArr();
-    VectorVector();
+    // VectorVector();
+    VectorEqualSign();
     return 0;
 }

@@ -11,12 +11,11 @@ auto print = [&](const int* arr, const int& n) {
     std::cout << '\n';
 };
 
-
 // memset 函数按字节对内存块进行初始化，
-// 所以不能用它将 int 数组初始化为0和 - 1之外的其他值（除非该值高字节和低字节相同）
+// 所以不能用它将 int 数组初始化为 0 和 -1 之外的其他值（除非该值高字节和低字节相同）
 void UseMemsetInitArr() {
     int n = 10;
-    int arr1[n]{}; // variable-sized object may not be initiali
+    int arr1[n] {}; // variable-sized object may not be initiali
     print(arr1, n);
 
     int arr2[n];
@@ -29,7 +28,7 @@ void UseMemsetInitArr() {
 
     int arr4[n];
     memset(arr4, 1, sizeof(arr4));
-    print(arr4, n);
+    print(arr4, n); // garbage data
 
 }
 

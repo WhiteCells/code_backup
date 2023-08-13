@@ -53,13 +53,39 @@ class Solution2 {
 public:
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
         int n = nums1.size(), m = nums2.size();
+        unordered_map<int, int> mp;
+        for (int i = 0; i < n; ++i) {
+            mp[nums1[i]] = i;
+        }
+        stack<int> s;
         vector<int> res(n, -1);
-        
+        for (int i = 0; i < m; ++i) {
+            while (!s.empty() && nums2[i] > nums2[s.top()]) {
+                if (mp.find(nums2[s.top()]) != mp.end()) {
+                    res[mp[nums2[s.top()]]] = nums2[i];
+                }
+                s.pop();
+            }
+            s.push(i);
+        }
+        return res;
     }
 };
 
 int main() {
     Solution s;
+    Solution2 s2;
 
+    // vector<int> nums1 { 4, 1, 2 }, nums2 { 1, 3, 4, 2 };
+    vector<int> nums1 { 1, 3, 5, 2, 4 }, nums2 { 6, 5, 4, 3, 2, 1, 7 };
+
+    // auto res = s.nextGreaterElement2(nums1, nums2);
+    auto res2 = s2.nextGreaterElement(nums1, nums2);
+
+    // for (auto& ele : res) {
+    for (auto& ele : res2) {
+        cout << ele << ' ';
+    }
+    cout << '\n';
     return 0;
 }
