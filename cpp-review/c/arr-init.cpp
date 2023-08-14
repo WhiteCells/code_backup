@@ -13,28 +13,30 @@ auto print(const int* const a, int n) {
     for (int i = 0; i < n; ++i) {
         std::cout << a[i] << ' ';
     }
+    std::cout << '\n';
 };
 
-void UseCArr() {
+void InitArr() {
 
     int arr[1000] = { 100 };
-    print(arr, 1000);
+    print(arr, 1000); // init [0] = 100, everything else is 0
+
+    std::cout  << "-----------------" << '\n';
+
+    int arr2[100];
+    print(arr2, 100); // 垃圾数据
 
     std::cout << "-----------------" << '\n';
 
-    int arr2[100];      // 垃圾数据
-    print(arr2, 100);
+    int arr3[100] { 0 };
+    print(arr3, 100); // 全部置为 0
 
-    std::cout << '\n' << "-----------------" << '\n';
-
-    int arr3[100] { 0 }; // 全部置为 0
-    print(arr3, 100);
-
-    std::cout << '\n' << "-----------------" << '\n';
+    std::cout << "-----------------" << '\n';
 
     int arr4[100] = {};
     print(arr4, 100);
 
+    std::cout << "-----------------" << '\n';
 }
 
 int globalArray[5]; // 全局变量数组，默认初始化为 0
@@ -81,7 +83,7 @@ void foo2() {
 
 
 int main() {
-    // UseCArr();
+    InitArr();
     // FlagArrTest();
     // constgArray();
     // foo2();
