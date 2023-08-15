@@ -5,16 +5,19 @@
 
 void UseString() {
     std::string s;
+    s += 'c';
     s.append("s");
     s.append("a");
     s.append("D");
 
+    std::cout << s << '\n'; // cpp
+
     const char* c_str = s.c_str();
     for (const char* p = c_str; *p != '\0'; ++p) {
-        printf("%c", *p);
+        printf("%c", *p); // c
     }
     printf("\n");
-    printf("%s\n", c_str);
+    printf("%s\n", c_str); // c
 
     int a = 1;
     // s.append(a); // append 参数 string

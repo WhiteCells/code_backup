@@ -1,16 +1,21 @@
-#include <iostream>
-#include <vector>
-
-
-void UseLowerBound() {
-    auto v = std::vector<int>{ 1, 2, 3, 6 }; // 找第一个比 3 大的值
-    auto iter1 = lower_bound(v.begin(), v.end(), 3); // 返回的迭代器指向3
-    auto iter2 = lower_bound(v.begin(), v.end(), 5); // 迭代器指向6（因为第一个大于等于6）
-
-    std::cout << *iter2 << '\n'; //
-}
+// lower_bound/upper_bound example
+#include <iostream>     // std::cout
+#include <algorithm>    // std::lower_bound, std::upper_bound, std::sort
+#include <vector>       // std::vector
 
 int main() {
-    UseLowerBound();
+    int myints[] = { 10, 20, 30, 30, 20, 10, 10, 20 };
+    std::vector<int> v(myints, myints+8); // 10 20 30 30 20 10 10 20
+    std::sort(v.begin(), v.end());        // 10 10 10 20 20 20 30 30
+
+    auto low  = std::lower_bound(v.begin(), v.end(), 20); //  >=
+    auto low2 = std::lower_bound(v.begin(), v.end(), 40); //
+    auto up   = std::upper_bound(v.begin(), v.end(), 20); //  >
+    auto up2  = std::upper_bound(v.begin(), v.end(), 40); //
+
+    std::cout << "lower_bound at position "  << (low- v.begin())   << '\n';
+    std::cout << "lower_bodun not in scope " << (low2 - v.begin()) << '\n';
+    std::cout << "upper_bound at position "  << (up - v.begin())   << '\n';
+    std::cout << "upper_bodun not in scope " << (up2 - v.begin())  << '\n';
     return 0;
 }

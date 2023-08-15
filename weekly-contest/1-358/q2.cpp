@@ -8,7 +8,7 @@ problme: 6914. 翻倍以链表形式表示的数字
 输出：[3,7,8]
 解释：上图中给出的链表，表示数字 189 。返回的链表表示数字 189 * 2 = 378 。
 数据范围：
-    链表中节点的数目在范围 [1, 104] 内
+    链表中节点的数目在范围 [1, 10^4] 内
     0 <= Node.val <= 9
     生成的输入满足：链表表示一个不含前导零的数字，除了数字 0 本身。
 url: https://leetcode.cn/problems/double-a-number-represented-as-a-linked-list/
@@ -28,6 +28,7 @@ public:
     ListNode(int val, ListNode* next): val(val), next(next) {}
 };
 
+// 栈
 class Solution {
 public:
     ListNode* doubleIt(ListNode* head) {
@@ -64,6 +65,26 @@ public:
     }
 };
 
+// O(n)
+// 考虑进位，按链表顺序遍历，当前值的下一个值大于 5，当前值进位 1
+class Solution2 {
+public:
+    ListNode* doubleIt(ListNode* head) {
+        if (head->val >= 5) {
+            head = new ListNode(0, head);
+        }
+        ListNode* cur = head;
+        while (cur) {
+            cur->val = cur->val * 2 % 10;
+            if (cur->next && cur->next->val >= 5) {
+                ++cur->val; // 进位
+            }
+            cur = cur->next;
+        }
+        return head;
+    }
+};
+
 void InitList(ListNode*& head);
 void PrintList(ListNode* head);
 
@@ -71,9 +92,15 @@ int main() {
     ListNode* head1 = nullptr;
     InitList(head1);
 
-    Solution s;
-    ListNode* res_head = s.doubleIt(head1);
-    PrintList(res_head);
+    // Solution s;
+    // ListNode* res_head = s.doubleIt(head1);
+    // PrintList(res_head);
+
+    // PrintList(head1);
+
+    Solution2 s2;
+    ListNode* res_head2 = s2.doubleIt(head1);
+    PrintList(res_head2);
 
     return 0;
 }
