@@ -65,10 +65,10 @@ int main() {
 
     // vector<int> nums { 5, 3, 2, 10, 15 };
     // int x = 1;
-    // vector<int> nums { 4, 3, 2, 4 };
-    // int x = 2;
-    vector<int> nums { 74, 4 };
-    int x = 1;
+    vector<int> nums { 4, 3, 2, 4 };
+    int x = 2;
+    // vector<int> nums { 74, 4 };
+    // int x = 1;
 
     cout << s.minAbsoluteDifference(nums, x);
     return 0;
