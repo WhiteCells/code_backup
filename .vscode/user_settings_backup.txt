@@ -1,0 +1,145 @@
+{
+  "update.enableWindowsBackgroundUpdates": false,
+  "update.showReleaseNotes": false,
+  "editor.fontSize": 18,
+  "C_Cpp.default.compilerPath": "D:\\\\MinGW\\mingw64\\\\bin\\\\g++.exe",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.includePath": [
+    "D:\\\\MinGW\\mingw64\\\\lib"
+  ],
+  "C_Cpp.default.intelliSenseMode": "gcc-x64",
+  "html.format.contentUnformatted": "",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.formatting": "vcFormat",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "workbench.editor.untitled.hint": "hidden",
+  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+    }
+  },
+  "varTranslation.baiduSecret": "20230210001556885,6143tJPi4ZLyIyWwLfNK",
+  "varTranslation.translationEngine": "baidu",
+  "terminal.integrated.lineHeight": 2,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "C_Cpp.vcFormat.space.preserveInInitializerList": false,
+  "debug.toolBarLocation": "docked",
+  "remote.SSH.remotePlatform": {
+    "Ubuntu18": "linux",
+    "alias": "linux",
+    "Linux-Ubuntu": "linux"
+  },
+  "workbench.startupEditor": "none",
+  "editor.accessibilitySupport": "off",
+  "telemetry.telemetryLevel": "off",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.vcFormat.indent.caseLabels": true,
+  "C_Cpp.vcFormat.indent.lambdaBracesWhenParameter": false,
+  "update.mode": "none",
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.enabled": false,
+  "gitlens.views.contributors.files.layout": "tree",
+  "gitlens.views.contributors.avatars": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#222222",
+    "statusBar.debuggingBackground": "#222222",
+    "statusBar.noFolderBackground": "#222222",
+    "editor.background": "#222222",
+    "statusBar.border": "#222222"
+  },
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+  "markdown.preview.fontSize": 18,
+  "hediet.vscode-drawio.resizeImages": null,
+  "workbench.layoutControl.enabled": false,
+  "editor.tokenColorCustomizations": {
+    "comments": {
+      "fontStyle": "italic",
+      // "foreground": "#669900",
+    }
+  },
+  "hexeditor.columnWidth": 16,
+  "hexeditor.showDecodedText": true,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside",
+  "markdown-image.base.fileNameFormat": "${mdname}${timestamp}",
+  "markdown-image.base.altFormat": "${mdname}",
+  "markdown-image.local.path": "assets",
+  "vscode-office.openOutline": false,
+  "workbench.editorAssociations": {
+    "*.md": "default"
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+  "C_Cpp.vcFormat.space.beforeConstructorColon": false,
+  "C_Cpp.vcFormat.space.beforeInheritanceColon": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.activeIconPack": "none",
+  "C_Cpp.vcFormat.space.aroundAssignmentOperator": "ignore",
+  "C_Cpp.vcFormat.indent.withinParentheses": "alignToParenthesis",
+  "C_Cpp.vcFormat.space.aroundBinaryOperator": "ignore",
+  "C_Cpp.codeAnalysis.runAutomatically": false,
+  "C_Cpp.vcFormat.space.beforeInitializerListOpenBrace": true,
+  "editor.formatOnSave": true,
+  "html.format.wrapLineLength": 0,
+  "editor.formatOnType": true,
+  "C_Cpp.vcFormat.space.pointerReferenceAlignment": "ignore",
+  "leetcode.endpoint": "leetcode-cn",
+  "leetcode.workspaceFolder": "d:\\distake\\code\\leetcode",
+  "leetcode.defaultLanguage": "cpp",
+  "leetcode.editor.shortcuts": [
+    "submit",
+    "test",
+    "description"
+  ],
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.showDescription": "Both",
+  "leetcode.hint.commentDescription": false,
+  "leetcode.filePath": {
+    "default": {
+      "folder": "",
+      "filename": "${id}.${kebab-case-name}.${ext}",
+    }
+  },
+  "C_Cpp.vcFormat.indent.preserveComments": true,
+  "leetcode.hint.commandShortcut": false,
+  "workbench.editor.enablePreview": false,
+  "search.followSymlinks": false,
+  "files.autoSave": "afterDelay",
+}

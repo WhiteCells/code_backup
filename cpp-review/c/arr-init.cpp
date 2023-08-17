@@ -13,7 +13,7 @@ auto print(const int* const a, int n) {
     for (int i = 0; i < n; ++i) {
         std::cout << a[i] << ' ';
     }
-    std::cout << '\n';
+    std::cout << "\n\n";
 };
 
 void InitArr() {
@@ -81,11 +81,27 @@ void foo2() {
     std::cout << p2 - p3 << '\n';
 }
 
+// class 
+class A {
+public:
+    int arr1[100];
+    static int arr2[100];
+};
+
+int A::arr2[100];
+
+void ClassArray() {
+    A a;
+    print(a.arr1, 100);
+    print(A::arr2, 100);
+}
+
 
 int main() {
-    InitArr();
+    // InitArr();
     // FlagArrTest();
     // constgArray();
     // foo2();
+    ClassArray();
     return 0;
 }

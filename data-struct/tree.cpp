@@ -31,7 +31,17 @@ void CreateTree(TreeNode*& root) {
 }
 
 void CreateTree2(TreeNode*& root) {
-    
+    char ch;
+    cin >> ch;
+    if ('#' != ch) {
+        root = new TreeNode;
+        root->val = ch;
+        CreateTree2(root->left);
+        CreateTree2(root->right);
+    }
+    else {
+        root = nullptr;
+    }
 }
 
 void PreorderTraversal(TreeNode* root) {
@@ -41,7 +51,6 @@ void PreorderTraversal(TreeNode* root) {
     cout << root->val << ' ';
     PreorderTraversal(root->left);
     PreorderTraversal(root->right);
-    cout << '\n';
 }
 
 void MiddleOrderTraversal(TreeNode* root) {
@@ -51,7 +60,6 @@ void MiddleOrderTraversal(TreeNode* root) {
     MiddleOrderTraversal(root->left);
     cout << root->val << ' ';
     MiddleOrderTraversal(root->right);
-    cout << '\n';
 }
 
 void SequentialTraversal(TreeNode* root) {
@@ -61,14 +69,17 @@ void SequentialTraversal(TreeNode* root) {
     SequentialTraversal(root->left);
     SequentialTraversal(root->right);
     cout << root->val << ' ';
-    cout << '\n';
 }
 
 int main() {
     TreeNode* root = nullptr;
-    CreateTree(root);
+    // CreateTree(root);
+    CreateTree2(root);
     PreorderTraversal(root);
+    cout << '\n';
     MiddleOrderTraversal(root);
+    cout << '\n';
     SequentialTraversal(root);
+    cout << '\n';
     return 0;
 }
