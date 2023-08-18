@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stack>
 
 using namespace std;
 
@@ -44,6 +45,24 @@ void CreateTree2(TreeNode*& root) {
     }
 }
 
+void PreOrder(TreeNode* root) {
+    if (root) {
+        stack<TreeNode*> s;
+        s.push(root);
+        while (!s.empty()) {
+            root = s.top();
+            cout << root->val << ' ';
+            s.pop();
+            if (root->right) {
+                s.push((root->right));
+            }
+            if (root->left) {
+                s.push(root->left);
+            }
+        }
+    }
+}
+
 void PreorderTraversal(TreeNode* root) {
     if (!root) {
         return;
@@ -73,13 +92,14 @@ void SequentialTraversal(TreeNode* root) {
 
 int main() {
     TreeNode* root = nullptr;
-    // CreateTree(root);
-    CreateTree2(root);
-    PreorderTraversal(root);
-    cout << '\n';
-    MiddleOrderTraversal(root);
-    cout << '\n';
-    SequentialTraversal(root);
-    cout << '\n';
+    CreateTree(root);
+    PreOrder(root);
+    // CreateTree2(root);
+    // PreorderTraversal(root);
+    // cout << '\n';
+    // MiddleOrderTraversal(root);
+    // cout << '\n';
+    // SequentialTraversal(root);
+    // cout << '\n';
     return 0;
 }

@@ -79,6 +79,19 @@ void VectorArr() {
     fun(v, 3);
 }
 
+// std::vector<int> m(int x, int y, int) { // m function
+//     std::cout << x << y << '\n';
+//     return { 1, 2, 3, 4 };
+// }
+
+// void TestVector() {
+//     std::vector<int> m(5, -1, 0); // init
+//     for (const auto& ele : m) {
+//         std::cout << ele << ' ';
+//     }
+//     std::cout << '\n';
+// }
+
 void VectorVector() {
     std::vector<std::vector<int>> v {
         { 1, 2, 3 },
@@ -106,6 +119,6 @@ int main() {
     // VectorPair();
     // VectorArr();
     // VectorVector();
-    VectorEqualSign();
+    // VectorEqualSign();
     return 0;
 }

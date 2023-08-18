@@ -8,7 +8,6 @@
   "C_Cpp.default.includePath": [
     "D:\\\\MinGW\\mingw64\\\\lib"
   ],
-  "C_Cpp.default.intelliSenseMode": "gcc-x64",
   "html.format.contentUnformatted": "",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
@@ -18,7 +17,6 @@
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-  "C_Cpp.formatting": "vcFormat",
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
@@ -88,7 +86,7 @@
   "workbench.layoutControl.enabled": false,
   "editor.tokenColorCustomizations": {
     "comments": {
-      "fontStyle": "italic",
+      // "fontStyle": "italic",
       // "foreground": "#669900",
     }
   },
@@ -138,8 +136,10 @@
     }
   },
   "C_Cpp.vcFormat.indent.preserveComments": true,
-  "leetcode.hint.commandShortcut": false,
-  "workbench.editor.enablePreview": false,
   "search.followSymlinks": false,
+  "C_Cpp.formatting": "vcFormat",
+  "C_Cpp.vcpkg.enabled": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "C_Cpp.autocompleteAddParentheses": true,
   "files.autoSave": "afterDelay",
 }
