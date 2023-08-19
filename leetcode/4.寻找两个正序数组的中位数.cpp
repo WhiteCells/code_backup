@@ -1,3 +1,4 @@
+#include "../head-file.h"
 /*
  * @lc app=leetcode.cn id=4 lang=cpp
  *
@@ -7,9 +8,9 @@
  *
  * algorithms
  * Hard (41.57%)
- * Likes:    6705
+ * Likes:    6707
  * Dislikes: 0
- * Total Accepted:    990.7K
+ * Total Accepted:    991.1K
  * Total Submissions: 2.4M
  * Testcase Example:  '[1,3]\n[2]'
  *
@@ -51,18 +52,83 @@
  *
  *
  */
-#include "../head-file.h"
+
 // @lc code=start
 class Solution {
 public:
-    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        int cnt = (nums1.size() + nums2.size()) / 2, i = 0, j = 0;
-        while (cnt--) {
+    /* sort */
+    /* time complexity:  O(n) + O(nlogn) + O(n) */
+    /* sapce complexity: O(1) */
+    // double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    //     for (const auto& num : nums2) {
+    //         nums1.push_back(num);
+    //     }
+    //     sort(nums1.begin(), nums1.end());
+    //     return nums1.size() & 1 ? nums1[nums1.size() / 2] : (nums1[nums1.size() / 2] + nums1[nums1.size() / 2 - 1]) / 2.0;
+    // }
 
-        }
+    /* two pointer */
+    /* time complexity:  O(m + n) */
+    /* sapce complexity: O(m + n) */
+    // double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    //     int i = 0, j = 0, n1 = nums1.size(), n2 = nums2.size(), n = n1 + n2, index = 0;
+    //     vector<int> v(n);
+    //     while (i < n1 && j < n2) {
+    //         if (nums1[i] < nums2[j]) {
+    //             v[index++] = nums1[i++];
+    //         }
+    //         else {
+    //             v[index++] = nums2[j++];
+    //         }
+    //     }
+    //     while (i < n1) {
+    //         v[index++] = nums1[i++];
+    //     }
+    //     while (j <  n2) {
+    //         v[index++] = nums2[j++];
+    //     }
+    //     return n & 1 ? v[n >> 1] : (v[n >> 1] + v[(n >> 1) - 1]) / 2.0;
+    // }
+
+    /* two point */
+    /* time complexity:  O(n1 * n2) */
+    /* sapce complexity: O(n2) */
+    // double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    //     int i = 0, n1 = nums1.size(), n2 = nums2.size(), n = n1 + n2;
+    //     // edge cases
+    //     if (0 == n1) {
+    //         return n2 & 1 ? nums2[n >> 1] : (nums2[n >> 1] + nums2[(n >> 1) - 1]) / 2.0;
+    //     }
+    //     if (0 == n2) {
+    //         return n1 & 1 ? nums1[n >> 1] : (nums1[n >> 1] + nums1[(n >> 1) - 1]) / 2.0;
+    //     }
+    //     nums1.resize(n);
+    //     while (i < n1) {
+    //         if (nums1[i] > nums2[0]) {
+    //             swap(nums1[i], nums2[0]);
+    //             // sort nums2
+    //             for (int j = 1; j < nums2.size() && nums2[j] < nums2[j - 1]; ++j) {
+    //                 swap(nums2[j], nums2[j - 1]);
+    //             }
+    //         }
+    //         ++i;
+    //     }
+    //     int j = 0;
+    //     while (j < n2) {
+    //         nums1[i++] = nums2[j++];
+    //     }
+    //     return n & 1 ? nums1[n >> 1] : (nums1[n >> 1] + nums1[(n >> 1) - 1]) / 2.0;
+    // }
+    
+    /* gap method */
+    /* time complexity:  O((log base 2 power N) * N) */
+    /* sapce complexity: O(1) */
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+
     }
 };
 // @lc code=end
+
 
 int main() {
     vector<int> nums1 { 1, 2 }, nums2 { 3, 4 };
