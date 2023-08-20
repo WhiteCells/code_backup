@@ -119,12 +119,74 @@ public:
     //     }
     //     return n & 1 ? nums1[n >> 1] : (nums1[n >> 1] + nums1[(n >> 1) - 1]) / 2.0;
     // }
-    
+
     /* gap method */
     /* time complexity:  O((log base 2 power N) * N) */
     /* sapce complexity: O(1) */
-    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    // double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    //     int n1 = nums1.size(), n2 = nums2.size(), n = n1 + n2;
+    //     // edge cases
+    //     if (0 == n1) {
+    //         return n2 & 1 ? nums2[n2 >> 1] : (nums2[n2 >> 1] + nums2[(n2 >> 1) - 1]) / 2.0;
+    //     }
+    //     if (0 == n2) {
+    //         return n1 & 1 ? nums1[n1 >> 1] : (nums1[n1 >> 1] + nums1[(n1 >> 1) - 1]) / 2.0;
+    //     }
+    //     int gap = ceil(n / 2.0); // round up
+    //     while (gap) {
+    //         int i = 0, j = gap;
+    //         while (j < n) {
+    //             // 'i' and 'j' in nums1
+    //             if (i < n1 && j < n1 && nums1[i] > nums1[j]) {
+    //                 swap(nums1[i], nums1[j]);
+    //             }
+    //             // 'i' in nums1 and 'j' in nums2
+    //             else if (i < n1 && j >= n1 && nums1[i] > nums2[j - n1]) {
+    //                 swap(nums1[i], nums2[j - n1]);
+    //             }
+    //             // 'i' and 'j' in nums2
+    //             else if (i >= n1 && j >= n1 && nums2[i - n1] > nums2[j - n1]) {
+    //                 swap(nums2[i - n1], nums2[j - n1]);
+    //             }
+    //             ++i;
+    //             ++j;
+    //         }
+    //         // edge cases, ceil(gap / 2.0) never becomes 0  
+    //         if (1 == gap) {
+    //             gap = 0;
+    //         }
+    //         gap = ceil(gap / 2.0);
+    //     }
+    //     // odd
+    //     if (n & 1) {
+    //         // determine whether (n / 2) is in nums1 or nums2
+    //         return (n >> 1) < n1 ? nums1[n >> 1] : nums2[(n >> 1) - n1];
+    //     }
+    //     // even
+    //     else {
+    //         if ((n >> 1) < n1) {
+    //             return (nums1[n >> 1] + nums1[(n >> 1) - 1]) / 2.0;
+    //         }
+    //         else if ((n >> 1) - 1 < n1) {
+    //             return (nums1[(n >> 1) - 1] + nums2[(n >> 1) - n1]) / 2.0;
+    //         }
+    //         else {
+    //             return (nums2[(n >> 1) - n1] + nums2[(n >> 1) - 1 - n1]) / 2.0;
+    //         }
+    //     }
+    // }
 
+    /*  */
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int n1 = nums1.size(), n2 = nums2.size(), n = n1 + n2;
+        // edge cases
+        if (0 == n1) {
+            return n2 & 1 ? nums2[n2 >> 1] : (nums2[n2 >> 1] + nums2[(n2 >> 1) - 1]) / 2.0;
+        }
+        if (0 == n2) {
+            return n1 & 1 ? nums1[n1 >> 1] : (nums1[n1 >> 1] + nums1[(n1 >> 1) - 1]) / 2.0;
+        }
+        
     }
 };
 // @lc code=end
