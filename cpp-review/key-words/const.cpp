@@ -9,6 +9,13 @@ void ModifyConst() {
     std::cout << no_const_val << '\n';
 }
 
+class A {
+public:
+    static const int a = 10;
+    const int b;
+    
+};
+
 
 int main() {
     ModifyConst();
