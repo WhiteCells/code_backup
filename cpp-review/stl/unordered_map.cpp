@@ -32,6 +32,16 @@ void UnorderedMap() {
     }
 }
 
+void ErgodicUnorderedMap() {
+    std::unordered_map<int, std::vector<int>> mp;
+    mp[4] = { 4, 5, 6 };
+    mp[6] = { 6, 7, 8 };
+    mp[8] = { 8, 9, 1 };
+    for (const auto& ele : mp) {
+        for (const auto& )
+    }
+}
+
 int main() {
     UnorderedMap();
     return 0;

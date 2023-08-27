@@ -63,6 +63,17 @@ void MinHeap() {
     std::cout << '\n'; // 1 2 3 4
 }
 
+
+void LamdaAsAComparisonFunction() {
+    // std::function<bool(const std::pair<int, int>, const std::pair<int, int>)> cmp = [&](const std::pair<int, int>& left, const std::pair<int, int>& right) {
+    auto cmp = [&](const std::pair<int, int>& left, const std::pair<int, int>& right) {
+        return left.second > right.second;
+    };
+    std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, decltype(cmp)> q(cmp);
+    q.push(std::make_pair(1, 2));
+    q.push(std::pair<int, int>(1, 2));
+}
+
 int main() {
     UsePriorityQueue();
     // MaxHeap();

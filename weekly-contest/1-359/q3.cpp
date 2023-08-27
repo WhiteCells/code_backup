@@ -47,18 +47,19 @@ f(i + 1) : 0 ~ i 的最大收益
 class Solution {
 public:
     int maximizeTheProfit(int n, vector<vector<int>>& offers) {
-        // vector<vector<int>> groups(n);
-        unordered_map<int, vector<int>> groups;
+        map<int, pair<int, int>> mp;
         for (const auto& offer : offers) {
-            groups[offer[1]] = { offer[0], offer[2] };
+            mp[offer[1]] = make_pair(offer[0], offer[2]);
         }
         vector<int> dp(n + 1);
-        for (const auto& group : groups) {
-            int start = group.second[0];
-            int end = group.first;
-            int gold = group.second[1];
+        for (const auto& m : mp) {
+            int start = m.second.first;
+            int end = m.first;
+            int gold = m.second.second;
             dp[end + 1] = dp[end];
+            dp[end + 1] = max(dp[end + 1], dp[start] + gold);
         }
+        return dp[n];
     }
 };
 

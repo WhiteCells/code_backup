@@ -71,11 +71,25 @@ void InterceptString() {
     }
 }
 
+void StringChar() {
+    std::string str;
+    std::string s2 = "->";
+    // char a = 'a', b = 'b';
+    int a = 1, b = 2;
+
+    // char s = (a + '0'), e = (b + '0');
+    // str += s + s2 + e;
+
+    str += std::to_string(a) + "->" + std::to_string(b);
+    std::cout << str << '\n';
+}
+
 int main() {
-    UseString();
+    // UseString();
     // StringReadRow();
     // StringType();
     // StringFind();
     // InterceptString();
+    StringChar();
     return 0;
 }

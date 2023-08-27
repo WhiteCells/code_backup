@@ -4,15 +4,17 @@
 
 void UsePair() {
 
-    std::pair<int, int> p2 = std::make_pair<int, int>(1, 2);
-
-    auto p1 = std::make_pair<int>(1, 2);
+    std::pair<int, int> p1 = std::make_pair<int, int>(1, 2);
+    auto p2 = std::make_pair<int>(1, 2);
     auto p3 = std::pair<int, int>({ 1, 2 });
+    auto p4 = std::pair<int, int> { 1, 2 };
+    auto p5 = std::pair<int, int>(1, 2);
 
     std::cout << p1.first << " " << p1.second << '\n';
     std::cout << p2.first << " " << p2.second << '\n';
     std::cout << p3.first << " " << p3.second << '\n';
-
+    std::cout << p4.first << " " << p4.second << '\n';
+    std::cout << p5.first << " " << p5.second << '\n';
 
     std::vector<std::pair<int, int>> v;
     v.push_back(std::pair<int, int>({ 1, 2 }));

@@ -8,13 +8,13 @@ void Exchange() {
     int* pa = &a;
     int* pb = &b;
 
-    // int* old_p = pa;
+    // int* old_pa = pa;
     // pa = pb;
-    int* old_p = std::exchange(pa, pb);
+    int* old_pa = std::exchange(pa, pb);
 
     std::cout << *pa << '\n';
     std::cout << *pb << '\n';
-    std::cout << *old_p << '\n';
+    std::cout << *old_pa << '\n';
 }
 
 int main() {
