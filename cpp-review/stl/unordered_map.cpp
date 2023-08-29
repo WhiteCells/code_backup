@@ -37,12 +37,18 @@ void ErgodicUnorderedMap() {
     mp[4] = { 4, 5, 6 };
     mp[6] = { 6, 7, 8 };
     mp[8] = { 8, 9, 1 };
-    for (const auto& ele : mp) {
-        for (const auto& )
+    for (const auto& v : mp) {
+        for (const auto& ele : v.second) {
+            std::cout << ele << ' ';
+        }
+        std::cout << '\n';
     }
+    std::cout << mp.count(6) << '\n';
+    std::cout << mp.count(7) << '\n';
 }
 
 int main() {
-    UnorderedMap();
+    // UnorderedMap();
+    ErgodicUnorderedMap();
     return 0;
 }
