@@ -57,6 +57,11 @@
         "thread": "cpp",
         "cstring": "cpp",
         "stack": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "cerrno": "cpp",
+        "climits": "cpp",
+        "ios": "cpp",
+        "queue": "cpp",
+        "random": "cpp"
     },
 }

@@ -2,11 +2,14 @@
 
 #include <algorithm>
 
+#include <numeric>
+
 #include <functional>
+
+#include <string>
 
 // stl
 #include <vector>
-#include <string>
 #include <stack>
 #include <queue>
 #include <deque>

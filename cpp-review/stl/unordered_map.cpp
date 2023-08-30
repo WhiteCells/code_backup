@@ -47,8 +47,17 @@ void ErgodicUnorderedMap() {
     std::cout << mp.count(7) << '\n';
 }
 
+/* [key] 访问时，如果 key 不存在，则会插入 [key] = 0 */
+void Func() {
+    std::unordered_map<int, int> mp;
+    mp[0];
+    std::cout << mp.count(0) << '\n';
+    std::cout << mp.count(1) << '\n';
+}
+
 int main() {
     // UnorderedMap();
-    ErgodicUnorderedMap();
+    // ErgodicUnorderedMap();
+    Func();
     return 0;
 }
