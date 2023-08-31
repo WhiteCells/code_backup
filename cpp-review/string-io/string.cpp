@@ -84,12 +84,19 @@ void StringChar() {
     std::cout << str << '\n';
 }
 
+void Stringtest() {
+    std::string s = "abc";
+    std::string s2 = std::string(s.begin(), s.begin()); // [)
+    std::cout << s2 << '\n';
+}
+
 int main() {
     // UseString();
     // StringReadRow();
     // StringType();
     // StringFind();
     // InterceptString();
-    StringChar();
+    // StringChar();
+    Stringtest();
     return 0;
 }
