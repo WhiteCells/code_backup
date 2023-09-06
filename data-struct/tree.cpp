@@ -5,10 +5,10 @@ using namespace std;
 
 struct TreeNode {
     int val;
-    TreeNode* left, *right;
+    TreeNode *left, *right;
 };
 
-void CreateTree(TreeNode*& root) {
+void CreateTree(TreeNode *&root) {
     char check;
     root = new TreeNode;
     cout << "输入节点信息:" << '\n';
@@ -31,7 +31,7 @@ void CreateTree(TreeNode*& root) {
     }
 }
 
-void CreateTree2(TreeNode*& root) {
+void CreateTree2(TreeNode *&root) {
     char ch;
     cin >> ch;
     if ('#' != ch) {
@@ -45,9 +45,9 @@ void CreateTree2(TreeNode*& root) {
     }
 }
 
-void PreOrder(TreeNode* root) {
+void PreOrder(TreeNode *root) {
     if (root) {
-        stack<TreeNode*> s;
+        stack<TreeNode *> s;
         s.push(root);
         while (!s.empty()) {
             root = s.top();
@@ -63,7 +63,7 @@ void PreOrder(TreeNode* root) {
     }
 }
 
-void PreorderTraversal(TreeNode* root) {
+void PreorderTraversal(TreeNode *root) {
     if (!root) {
         return;
     }
@@ -72,7 +72,7 @@ void PreorderTraversal(TreeNode* root) {
     PreorderTraversal(root->right);
 }
 
-void MiddleOrderTraversal(TreeNode* root) {
+void MiddleOrderTraversal(TreeNode *root) {
     if (!root) {
         return;
     }
@@ -81,7 +81,7 @@ void MiddleOrderTraversal(TreeNode* root) {
     MiddleOrderTraversal(root->right);
 }
 
-void SequentialTraversal(TreeNode* root) {
+void SequentialTraversal(TreeNode *root) {
     if (!root) {
         return;
     }
@@ -90,8 +90,17 @@ void SequentialTraversal(TreeNode* root) {
     cout << root->val << ' ';
 }
 
+void DestoryTree(TreeNode *&root) {
+    if (!root) {
+        return;
+    }
+    DestoryTree(root->left);
+    DestoryTree(root->right);
+    delete root;
+}
+
 int main() {
-    TreeNode* root = nullptr;
+    TreeNode *root = nullptr;
     CreateTree(root);
     PreOrder(root);
     // CreateTree2(root);
@@ -101,5 +110,6 @@ int main() {
     // cout << '\n';
     // SequentialTraversal(root);
     // cout << '\n';
+    DestoryTree(root);
     return 0;
 }

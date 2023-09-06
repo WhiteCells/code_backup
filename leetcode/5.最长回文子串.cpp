@@ -47,7 +47,7 @@
  */
 
 // @lc code=start
-class Solution {
+class Solution1 {
 public:
     bool ItSAPalindromeString(string& s, int i, int j) {
         if (i == j) {
@@ -80,12 +80,20 @@ public:
         return ret;
     }
 };
+
+class Solution {
+public:
+    string longestPalindrome(string s) {
+
+    }
+};
 // @lc code=end
 
 
 int main() {
     string s = "babad";
     // string s = "cbbd";
+    cout << Solution1().longestPalindrome(s) << '\n';
     cout << Solution().longestPalindrome(s) << '\n';
     return 0;
 }
