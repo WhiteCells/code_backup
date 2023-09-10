@@ -22,11 +22,14 @@ problme:
 url: https://leetcode.cn/problems/course-schedule/
 */
 
+/*
+    深搜
+ */
 class Solution {
 private:
-    vector<vector<int>> edges;
-    vector<int> visited;
-    bool valid = true;
+    vector<vector<int>> edges; // 拓扑排序边的关系
+    vector<int> visited; // 深搜访问标记
+    bool valid = true; // 值是否有效
 
 public:
     void dfs(int u) {
@@ -47,8 +50,10 @@ public:
     }
 
     bool canFinish(int numCourses, vector<vector<int>> &prerequisites) {
+        /* 建立边关系 */
         edges.resize(numCourses);
         visited.resize(numCourses);
+        // 
         for (const auto &info: prerequisites) {
             edges[info[1]].push_back(info[0]);
         }
