@@ -3,8 +3,8 @@
 
 #include <vector>
 
-auto print = [&](const auto& v) {
-    for (const auto& ele : v) {
+auto print = [&](const auto &v) {
+    for (const auto &ele : v) {
         std::cout << ele << ' ';
     }
     std::cout << '\n';
@@ -31,14 +31,22 @@ void InitVector() {
 // std::vector<bool> 被特化为压缩存储，以节省内存空间
 void VectorBool() {
     std::vector<bool> v { false, true, false, true };
-    print(v); // 0 1 0 1
+    // 不能使用 emplace 
+    // 将 emplace 应用于 vector<bool> 类型的容器时，会引发编译错误
+    // vector<bool> 是一个特殊的容器类型，它进行了优化以节省内存空间。
+    // 在 vector<bool> 中，每个元素都被压缩为一个位来表示，而不是一个完整的 bool 对象。
+    // 这种优化导致 emplace 函数无法正确地构造和插入新元素。
+    // v.emplace(false); // error
+    v.push_back(false);
 
-    // for (auto& ele : v) { // 非常量引用的初始值必须为左值C/C++(461)
+    print(v); // 0 1 0 1 0 
+
+    // for (auto &ele : v) { // 非常量引用的初始值必须为左值C/C++(461)
     for (auto ele : v) {
-        ele = true;  // 1 1 1 1
-        // ele = false; // 0 0 0 0
+        ele = true;
+        // ele = false;
     }
-    print(v); // 1 1 1 1
+    print(v); // 1 1 1 1 1
 }
 
 void VectorPair() {
@@ -60,14 +68,14 @@ void VectorPair() {
 
     std::sort(v.begin(), v.end(), std::greater<PII>()); // 降序
 
-    for (const auto& val : v) {
+    for (const auto &val : v) {
         std::cout << val.first << ' ' << val.second << '\n';
     }
 }
 
 void fun(std::vector<int> v[], int n) {
     for (int i = 0; i < n; ++i) {
-        for (auto& ele : v[i]) {
+        for (auto &ele : v[i]) {
             std::cout << ele << ' ';
         }
         std::cout << '\n';
@@ -98,8 +106,8 @@ void VectorVector() {
         { 2, 3, 4 },
         { 3, 4, 5 }, // 这里可以以 , 结尾
     };
-    for (const auto& ele : v) {
-        for (const auto& val : ele) {
+    for (const auto &ele : v) {
+        for (const auto &val : ele) {
             std::cout << val << ' ';
         }
         std::cout << '\n';

@@ -41,16 +41,6 @@ url: https://leetcode.cn/problems/course-schedule-ii/
 
 class Solution {
 private:
-    vector<vector<int>> edge; // 纪律拓扑排序关系
-    
-public:
-    vector<int> findOrder(int numCourses, vector<vector<int>> &prerequisites) {
-
-    }
-};
-
-class Solution {
-private:
     vector<vector<int>> edges; // 拓扑排序边的关系
     vector<int> visited; // 深搜访问标记
     bool valid = true; // 值是否有效
