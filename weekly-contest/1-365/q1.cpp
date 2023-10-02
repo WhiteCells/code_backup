@@ -29,6 +29,7 @@ public:
 };
 
 int main() {
-
+    vector<int> nums{ 1, 10, 3, 4, 19 };
+    cout << Solution().maximumTripletValue(nums) << '\n';
     return 0;
 }

@@ -2,11 +2,10 @@
   "update.enableWindowsBackgroundUpdates": false,
   "update.showReleaseNotes": false,
   "editor.fontSize": 18,
-  "C_Cpp.default.compilerPath": "D:\\\\MinGW\\mingw64\\\\bin\\\\g++.exe",
-  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.compilerPath": "D:/MinGW/mingw64/bin/g++.exe",
   "C_Cpp.default.cStandard": "c17",
   "C_Cpp.default.includePath": [
-    "D:\\MinGW\\mingw64\\lib"
+    "D:/MinGW/mingw64/lib"
   ],
   "html.format.contentUnformatted": "",
   "[c]": {
@@ -98,7 +97,6 @@
   "C_Cpp.vcFormat.indent.withinParentheses": "alignToParenthesis",
   "C_Cpp.vcFormat.space.aroundBinaryOperator": "ignore",
   "C_Cpp.codeAnalysis.runAutomatically": false,
-  "C_Cpp.vcFormat.space.beforeInitializerListOpenBrace": true,
   "editor.formatOnSave": true,
   "html.format.wrapLineLength": 0,
   "C_Cpp.vcFormat.space.pointerReferenceAlignment": "right",
@@ -123,7 +121,6 @@
   "C_Cpp.formatting": "vcFormat",
   "C_Cpp.vcpkg.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "C_Cpp.autocompleteAddParentheses": true,
   "extensions.autoUpdate": false,
   "leetcode.hint.commandShortcut": false,
   "editor.comments.ignoreEmptyLines": false,
@@ -138,6 +135,4 @@
   "java.debug.settings.enableRunDebugCodeLens": false,
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.panel.defaultLocation": "right",
-  "debug.showInStatusBar": "never",
-  "workbench.editor.enablePreview": false,
 }
