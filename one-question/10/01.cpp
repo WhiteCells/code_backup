@@ -32,10 +32,12 @@ problme: 121. 买卖股票的最佳时机
     0 <= prices[i] <= 104
 
 
-url:
+url: 
  */
 
 // TLE
+// time complexity: O(n^2)
+// spatial complexity: O(1)
 class Solution {
 public:
     int maxProfit(vector<int> &prices) {
@@ -49,6 +51,8 @@ public:
     }
 };
 
+// time complexity: O(n)
+// spatial complexity: O(1)
 class Solution2 {
 public:
     int maxProfit(vector<int> &prices) {
@@ -67,6 +71,8 @@ public:
     }
 };
 
+// time complexity: O(n)
+// spatial complexity: O(1)
 class Solution3 {
 public:
     int maxProfit(vector<int> &prices) {

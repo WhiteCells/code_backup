@@ -59,14 +59,14 @@ public:
             pre_max[i] = max(nums[i], pre_max[i - 1]);
         }
 
-        // 数组的后缀最大值 
+        // 数组的后缀最大值
         // [2, n - 2] 从 n - 2 开始，到 2
-        // suf_max[k] = max(nums[k], pre_max[k + 1]) 
+        // suf_max[k] = max(nums[k], pre_max[k + 1])
         for (int k = n - 2; k > 1; --k) {
             suf_max[k] = max(nums[k], suf_max[k + 1]);
         }
 
-        // 枚举 j 
+        // 枚举 j
         // [1, n - 1)
         long long res = 0;
         for (int j = 1; j + 1 < n; ++j) {
@@ -88,11 +88,13 @@ public:
         for (const auto &ele : nums) {
             // 将 ele 视为 nums[k]
             res = max(res, (long long)max_diff * ele);
-            // 将 ele 视为 nums[j]，维护最大差
+            // 将 ele 视为 nums[j], 维护最大差
             max_diff = max(max_diff, pre_max - ele);
-            // 将 ele 视为 nums[i]，维护前缀最大值
+            // 将 ele 视为 nums[i], 维护前缀最大值
             pre_max = max(pre_max, ele);
-        }   // 需要先维护 res
+            // 先维护 res, 保证当前维护的 res 使用的是 ele 左侧的 max_diff
+            // 再维护 max_diff, 保证当前维护的 max_diff 使用的是 ele 左侧的 pre_max
+        }
 
         return res;
     }
