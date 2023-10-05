@@ -41,6 +41,8 @@ public:
 };
 
 int main() {
-    
+    vector<int> prices{ 3, 2, 6, 5, 0, 3 };
+    int k = 2;
+    cout << Solution().maxProfit(k, prices) << '\n';
     return 0;
 }
