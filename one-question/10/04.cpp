@@ -36,7 +36,24 @@ url: https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/description
 class Solution {
 public:
     int maxProfit(int k, vector<int> &prices) {
-        
+        int n = prices.size();
+        vector<vector<vector<int>>> menm(n, vector<vector<int>>(k + 1, vector<int>(2, -1)));
+        function<int(int, int, bool)> dfs = [&](int i, int j, bool hold)->int {
+            if (i < 0) {
+                return hold ? INT_MIN : 0;
+            }
+            if (j < 0) {
+                return INT_MIN;
+            }
+            if (-1 != menm[i][j][hold]) {
+                return menm[i][j][hold];
+            }
+            if (hold) {
+                return menm[i][j][true] = max(dfs(i - 1, j, true), dfs(i - 1, j, false) - prices[i]);
+            }
+            return menm[i][j][false] = max(dfs(i - 1, j, false), dfs(i - 1, j - 1, true) + prices[i]);
+        };
+        return dfs(n - 1, k, 0);
     }
 };
 

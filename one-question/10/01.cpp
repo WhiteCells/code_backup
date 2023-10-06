@@ -10,7 +10,6 @@ problme: 121. 买卖股票的最佳时机
 返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。
 
 
-
 示例 1：
 
 输入：[7,1,5,3,6,4]
@@ -32,13 +31,13 @@ problme: 121. 买卖股票的最佳时机
     0 <= prices[i] <= 104
 
 
-url: 
+url:
  */
 
 // TLE
 // time complexity: O(n^2)
 // spatial complexity: O(1)
-class Solution {
+class Solution1 {
 public:
     int maxProfit(vector<int> &prices) {
         int res = 0, n = prices.size();
@@ -71,24 +70,37 @@ public:
     }
 };
 
-// time complexity: O(n)
-// spatial complexity: O(1)
+// 简化
 class Solution3 {
 public:
     int maxProfit(vector<int> &prices) {
-        int res = 0, mn = INT_MAX, n = prices.size();
-        for (const auto &p : prices) {
-            mn = min(mn, p);
-            res = max(res, p - mn);
+        int n = prices.size();
+        int mn = INT_MAX; // 最低成本购入
+        int res = 0;
+        for (int i = 0; i < n; ++i) {
+            mn = min(prices[i], mn);
+            res = max(res, prices[i] - mn);
         }
         return res;
     }
 };
 
+// time complexity: O(n)
+// spatial complexity: O(n)
+// 动态规划
+// 只能交易 1 次
+class Solution4 {
+public:
+    int maxProfit(vector<int> &prices) {
+        
+    }
+};
+
 int main() {
-    vector<int> prices{ 7, 1, 5, 3, 6, 4 };
-    cout << Solution().maxProfit(prices) << '\n';
+    vector<int> prices { 7, 1, 5, 3, 6, 4 };
+    cout << Solution1().maxProfit(prices) << '\n';
     cout << Solution2().maxProfit(prices) << '\n';
     cout << Solution3().maxProfit(prices) << '\n';
+    cout << Solution4().maxProfit(prices) << '\n';
     return 0;
 }
