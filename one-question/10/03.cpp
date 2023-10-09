@@ -48,11 +48,23 @@ url: https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/descriptio
 class Solution {
 public:
     int maxProfit(vector<int> &prices) {
-
+        int n = prices.size();
+        int buy1 = -prices[0]; // 第一次买, 买入就是亏损
+        int sell1 = 0; // 第一次利润
+        int buy2 = -prices[0]; // 第二次买, 买入就是亏损
+        int sell2 = 0; // 第二次利润
+        for (int i = 1; i < n; ++i) {
+            buy1 = max(buy1, 0 - prices[i]);
+            sell1 = max(sell1, buy1 + prices[i]);
+            buy2 = max(buy2, sell1 - prices[i]);
+            sell2 = max(sell2, buy2 + prices[i]);
+        }
+        return sell2;
     }
 };
 
 int main() {
-
+    vector<int> prices { 1, 2, 3, 4, 5 };
+    cout << Solution().maxProfit(prices) << '\n';
     return 0;
 }
