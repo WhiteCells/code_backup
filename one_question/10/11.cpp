@@ -119,6 +119,45 @@ public:
     }
 };
 
+class Solution3 {
+public:
+    vector<int> topStudents(vector<string>& positive_feedback, vector<string>& negative_feedback, vector<string>& report, vector<int>& student_id, int k) {
+        unordered_map<string, int> mp;
+        for (const auto &positive : positive_feedback) {
+            mp[positive] = 3;
+        }
+        for (const auto &negative : negative_feedback) {
+            mp[negative] = -1;
+        }
+        unordered_map<int, int> stu_mp; // id : score
+        for (int i = 0; i < report.size(); ++i) {
+            string word;
+            stu_mp[student_id[i]] = 0;
+            for (int j = 0; j < report[i].size(); ++j) {
+                if (' ' == report[i][j]) {
+                    if (mp.count(word)) {
+                        stu_mp[student_id[i]] += mp[word];
+                    }
+                    word.clear();
+                }
+                word += report[i][j];
+            }
+            if (mp.count(word)) {
+                stu_mp[student_id[i]] += mp[word];
+            }
+        }
+        vector<pair<int, int>> vpair(stu_mp.begin(), stu_mp.end());
+        sort(vpair.begin(), vpair.end(), [&](const pair<int, int> &p1, const pair<int, int> &p2){
+            return p1.second == p2.second ? p1.first < p2.first : p1.second > p2.second;
+        });
+        vector<int> res;
+        for (int i = 0; i < min(k, static_cast<int>(vpair.size())); ++i) {
+            res.emplace_back(vpair[i].first);
+        }
+        return res;
+    }
+};
+
 int main() {
     vector<string> positive_feedback { "smart", "brilliant", "studious" };
     vector<string> negative_feedback { "not" };

@@ -71,7 +71,7 @@ public:
                 int cnt = 0;
                 if (("" == res || subs < res) && k == [&subs, &cnt] { // O(n)
                     for (const auto &c : subs) {
-                        cnt += '1' == c ? 1 : 0;
+                        cnt += c - '0';
                     }
                     return cnt;
                 }()) {
@@ -103,7 +103,6 @@ public:
             }
             if (cnt1 == k) {
                 string subs(s.begin() + left, s.begin() + right + 1);
-                cout << subs << endl;
                 // 1. res 为空
                 // 2. res 的长度小于 subs 长度
                 // 3. res 的长度等于 subs 长度 且 res 字典序 比 subs 大
