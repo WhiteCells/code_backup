@@ -57,9 +57,33 @@ url: https://leetcode.cn/problems/minimum-number-of-groups-to-create-a-valid-ass
 class Solution {
 public:
     int minGroupsForValidAssignment(vector<int>& nums) {
-        
+        unordered_map<int, int> cnt;
+        for (const auto &num : nums) {
+            ++cnt[num];
+        }
+        int min_k = INT_MAX;
+        for (const auto &p : cnt) {
+            min_k = min(min_k, p.second);
+        }
+        for (int k = min_k; k > 0; --k) {
+            int res = 0;
+            for (const auto &[_, c] : cnt) {
+                int q = c / k; // floor(c / k)
+                int r = c % k;
+                if (q < r) {
+                    res = 0;
+                    break;
+                }
+                res += (c + k) / (k + 1); // ceil(c / (k + 1)) -> floor((c + k) / (k + 1))
+            }
+            if (res) {
+                return res;
+            }
+        }
+        return -1;
     }
 };
+
 int main() {
     
     return 0;

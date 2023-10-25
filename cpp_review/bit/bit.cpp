@@ -1,10 +1,7 @@
 #include <iostream>
 
 /*
-使用 char 的位，1 byte = 8 bit
-选课功能
-退课功能
-查询功能
+使用 char 1 byte = 8 bit
  */
 
 #define ALGORITHM_DESIGN                0b00000001
@@ -16,30 +13,19 @@
 #define COMPUTER_OPERATING_SYSTEM       0b01000000
 #define DATA_STRUCTURE_BUDGETING_METHOD 0b10000000
 
-/*
-选课
- */
+
 void SelectCourse(char* student, char course) {
     *student |= course;
 }
 
-/*
-退课
- */
 void WithdrawalCourse(char* student, char course) {
     *student &= ~course;
 }
 
-/*
-查询
- */
 bool QueryCourse(char* student, char course) {
     return *student & course;
 }
 
-/*
-打印已选
- */
 void PrintSelectedCourse(char* student) {
 
 }

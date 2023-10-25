@@ -62,6 +62,8 @@
         "climits": "cpp",
         "ios": "cpp",
         "queue": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "iso646.h": "c",
+        "iomanip": "cpp"
     },
 }
