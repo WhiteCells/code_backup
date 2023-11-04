@@ -38,7 +38,7 @@ public:
                 q.push(v);
             }
         }
-        // 计算最大环和总邀请次数
+        // 计算最大环
         int ring = 0, total = 0;
         for (int i = 0; i < n; ++i) {
             if (!used[i]) {

@@ -64,6 +64,9 @@
         "queue": "cpp",
         "random": "cpp",
         "iso646.h": "c",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "fcntl.h": "c",
+        "types.h": "c",
+        "unistd.h": "c"
     },
 }
