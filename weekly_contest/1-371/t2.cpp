@@ -28,7 +28,6 @@ public:
                 while (j - i + 1 < 3) {
                     ++j;
                 }
-                // 两端值之差
                 int dif = abs(stoi(tm[i]) - stoi(tm[j]));
                 if (dif < 100) {
                     res.push_back(name);
@@ -36,7 +35,7 @@ public:
                 }
                 ++i;
             }
-#if 0
+#if 1
             cout << name << " ";
             for (const auto &t : tm) {
                 cout << t << " ";
@@ -49,11 +48,23 @@ public:
 };
 
 int main() {
-    // vector<vector<string>> access_times { { "a", "0549" }, { "b", "0457" }, { "a", "0532" }, { "a", "0621" }, { "b", "0540" } };
-    vector<vector<string>> access_times { { "akuhmu", "0454" }, { "aywtqh", "0523" },
-                                         { "akuhmu", "0518" }, { "ihhkc", "0439" },
-                                         { "ihhkc", "0508" }, { "akuhmu", "0529" },
-                                         { "aywtqh", "0530" }, { "aywtqh", "0419" } };
+    // vector<vector<string>> access_times {
+    //     { "a", "0549" },
+    //     { "b", "0457" },
+    //     { "a", "0532" },
+    //     { "a", "0621" },
+    //     { "b", "0540" }
+    // };
+    vector<vector<string>> access_times {
+        { "akuhmu", "0454" },
+        { "aywtqh", "0523" },
+        { "akuhmu", "0518" },
+        { "ihhkc", "0439" },
+        { "ihhkc", "0508" },
+        { "akuhmu", "0529" },
+        { "aywtqh", "0530" },
+        { "aywtqh", "0419" }
+    };
     auto res = Solution().findHighAccessEmployees(access_times);
     for (const auto &name : res) {
         cout << name << endl;

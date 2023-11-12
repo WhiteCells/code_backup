@@ -1,9 +1,9 @@
 #include "../../head-file.h"
 
 /*
-problme: 
+problme:
 
-url: 
+url:
  */
 
 // time complexity: O()
@@ -11,53 +11,79 @@ url:
 class RangeModule {
 public:
     RangeModule() {
-        s.clear();
-        m.clear();
-        left_inte = false;
-        right_inte = false;
+        
     }
-    
-    void addRange(int left, int right) {        
-        if (!queryRange(left, right)) {
-            // 区间之间有交集
-            if (left_inte) {
-                // 左区间存在
-                 
-            } else if (right_inte) {
-                   
+
+    void addRange(int left, int right) {
+        auto it = m.upper_bound(left);
+        if (it != m.begin()) {
+            auto start = prev(it);
+            if (start->second >= right) {
+                return;
+            } else if (start->second >= left) {
+                left = start->first;
+                m.erase(start);
             }
-            // 区间之间无交集
-            s.emplace(left, right);
-            m.emplace(left, right);
         }
+        while (it != m.end() && it->first <= right) {
+            right = max(right, it->second);
+            it = m.erase(it);
+        }
+        m[left] = right;
     }
-    
+
     bool queryRange(int left, int right) {
-        // 找到第一个 >= left 的下标
-        auto left_it = m.lower_bound(left);
-        // 如果找到的区间左端点 <= right 则说明区间重合
-        if (m.find(left_it->first) != m.end() && m.at(left_it->first) <= right) {
-            cout << left_it->first << " " << left_it->second << endl;
-            return true;
+        auto it = m.upper_bound(left);
+        if (it == m.begin()) {
+            return false;
         }
-        // auto right_it = m.lower_bound(right);
+        it = prev(it);
+        return right <= it->second;
     }
-    
+
     void removeRange(int left, int right) {
-        if (queryRange(left, right)) {
-            // 区间存在
-            
+        auto it = m.upper_bound(left);
+        if (it != m.begin()) {
+            auto start = prev(it);
+            if (start->second >= right) {
+                int r = start->second;
+                if (start->first == left) {
+                    m.erase(start);
+                } else {
+                    start->second = left;
+                }
+                if (right != r) {
+                    m[right] = r;
+                }
+                return;
+            } else if (start->second > left) {
+                if (start->first == left) {
+                    m.erase(start);
+                } else {
+                    start->second = left;
+                }
+            }
+        }
+        while (it != m.end() && it->first < right) {
+            if (it->second <= right) {
+                it = m.erase(it);
+            } else {
+                m[right] = it->second;
+                m.erase(it);
+                break;
+            }
         }
     }
 private:
-    set<pair<int, int>> s;
     map<int, int> m;
-    bool left_inte, right_inte;
 };
 
 int main() {
-    RangeModule r;
-    r.addRange(10, 20);
-    r.queryRange(10, 20);
+    RangeModule rm;
+    rm.addRange(10, 20);
+    rm.removeRange(14, 16);
+    cout << rm.queryRange(10, 14) << endl;
+    cout << rm.queryRange(13, 15) << endl;
+    cout << rm.queryRange(16, 17) << endl;
     return 0;
 }
