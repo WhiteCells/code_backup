@@ -54,13 +54,13 @@ public:
         int i = 0;
         int n = nums.size();
         while (i < n) {
-            if (nums[i] % 2 || nums[i] > threshold) {
+            if (!(nums[i] & 1) || nums[i] > threshold) {
                 i++; // 第一个数是 奇数 或者 大于 threshold 直接看下一个数
                 continue;
             }
             int j = i; // 第一个数是 偶数 开始记录下标
             i++;
-            while (i < n && nums[i] % 2 != nums[i - 1] % 2 && nums[i] <= threshold) {
+            while (i < n && ((nums[i] ^ nums[i - 1]) & 1) && nums[i] <= threshold) {
                 i++;
             }
             ans = max(ans, i - j);
