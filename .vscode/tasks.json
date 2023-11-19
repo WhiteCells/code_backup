@@ -3,17 +3,17 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe 生成活动文件",
-            "command": "D:\\MinGW\\mingw64\\bin\\g++.exe",
+            "command": "D:\\mingw64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
-                "-std=c++17",
+                // "-std=c++17",
                 "-g",
                 "${file}",
                 "-o",
-                "${workspaceFolder}\\output.exe",
+                "${workspaceFolder}\\output.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "D:\\mingw64\\bin"
             },
             "problemMatcher": [
                 "$gcc"

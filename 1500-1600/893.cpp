@@ -33,7 +33,6 @@ problme: 893. 特殊等价字符串组
 输出：3
 解释：3 组 ["abc","cba"]，["acb","bca"]，["bac","cab"]
 
-
 提示：
 
     1 <= words.length <= 1000
@@ -41,7 +40,7 @@ problme: 893. 特殊等价字符串组
     所有 words[i] 都只由小写字母组成。
     所有 words[i] 都具有相同的长度。
 
-url:
+url: https://leetcode.cn/problems/maximum-sum-queries/
  */
 
 // time complexity: O()
