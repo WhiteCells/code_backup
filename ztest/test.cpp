@@ -9,8 +9,7 @@ int main() {
         char c;
         char *d;
     };
-    std::cout << sizeof(A) << std::endl;
-    // std::cout << sizeof(short) << std::endl;
+    // std::cout << sizeof(A) << std::endl;
 
     A aa;
     aa.a = 1;
@@ -24,10 +23,13 @@ int main() {
     // std::cout << &aa.c << std::endl;
     // std::cout << &aa.d << std::endl;
 
-    printf("%p\n", &aa);   // 00000027379ff910
-    printf("%p\n", &aa.a); // 00000027379ff910
-    printf("%p\n", &aa.b); // 00000027379ff914
-    printf("%p\n", &aa.c); // 00000027379ff916
-    printf("%p\n", &aa.d); // 00000027379ff918
+    // printf("%p\n", &aa);   // 00000027379ff910
+    // printf("%p\n", &aa.a); // 00000027379ff910
+    // printf("%p\n", &aa.b); // 00000027379ff914
+    // printf("%p\n", &aa.c); // 00000027379ff916
+    // printf("%p\n", &aa.d); // 00000027379ff918
+
+    // printf("test");
+    // while (1) {};
     return 0;
 }
