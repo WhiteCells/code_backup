@@ -46,13 +46,39 @@
 class Solution {
 public:
     string addBinary(string a, string b) {
-        
+        reverse(a.begin(), a.end());
+        reverse(b.begin(), b.end());
+        int carry = 0;
+        int n = max(a.size(), b.size());
+        string res;
+        for (int i = 0; i < n; ++i) {
+            int now = 0;
+            if (i < a.size()) {
+                now += (a[i] - '0');
+            }
+            if (i < b.size()) {
+                now += (b[i] - '0');
+            }
+            now += carry;
+            if (now > 1) {
+                carry = 1;
+                res += (now % 2) + '0';
+            } else {
+                carry = 0;
+                res += now + '0';
+            }
+        }
+        if (carry) {
+            res += '1';
+        }
+        reverse(res.begin(), res.end());
+        return res;
     }
 };
 // @lc code=end
 
-
 int main() {
     Solution s;
+    cout << s.addBinary("1111", "1111") << endl;
     return 0;
 }
