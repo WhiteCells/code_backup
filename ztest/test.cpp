@@ -64,10 +64,12 @@
 
 #include <iostream>
 #include <Windows.h>
+#include <format>
 
 int main() {
     int a = 33;
     int mod = 16;
     std::cout << (a & (mod - 1)) << std::endl;
+    std::string str = std::format("test{}", mod);
     return 0;
 }
