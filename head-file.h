@@ -33,6 +33,9 @@
 #include <cmath>
 #include <cstring>
 
+// smart pointer
+#include <memory>
+
 
 // #include <bits/stdc++.h>
 
