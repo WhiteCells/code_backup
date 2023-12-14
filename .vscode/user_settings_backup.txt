@@ -5,7 +5,7 @@
   "C_Cpp.default.compilerPath": "D:/MinGW/mingw64/bin/g++.exe",
   "C_Cpp.default.cStandard": "c17",
   "C_Cpp.default.includePath": [
-    "D:/MinGW/mingw64/lib"
+    "D:/mingw64/lib"
   ],
   "html.format.contentUnformatted": "",
   "[c]": {
@@ -14,9 +14,8 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "workbench.editor.untitled.hint": "hidden",
   "terminal.integrated.fontSize": 17,
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
@@ -53,7 +52,6 @@
     "WSL-Linux-Ubuntu": "linux"
   },
   "workbench.startupEditor": "none",
-  "editor.accessibilitySupport": "off",
   "telemetry.telemetryLevel": "off",
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
@@ -62,42 +60,38 @@
   "C_Cpp.vcFormat.indent.lambdaBracesWhenParameter": false,
   "update.mode": "none",
   "editor.minimap.renderCharacters": false,
-  "editor.minimap.enabled": false,
   "workbench.colorCustomizations": {
     "statusBar.background": "#222222",
     "statusBar.debuggingBackground": "#222222",
     // "statusBar.noFolderBackground": "#222222",
-    // "editor.background": "#222222",
+    // "editor.background": "#151515",
+    // "sideBar.background": "#1a1a1a"
     // "statusBar.border": "#222222",
     // "statusBar.remoteBackground": "#000000",
     // "statusBar.remoteForeground": "#ffffff",
   },
   "markdown.preview.scrollEditorWithPreview": false,
   "markdown.preview.scrollPreviewWithEditor": false,
-  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "markdown.preview.fontSize": 18,
   "workbench.layoutControl.enabled": false,
   "editor.tokenColorCustomizations": {
-      "comments": {
-        // "fontStyle": "italic",
-        // "foreground": "#669900",
-      }
+    "comments": {
+      // "fontStyle": "italic",
+      // "foreground": "#7a7e85",
+    }
   },
   "markdown-image.base.fileNameFormat": "${mdname}${timestamp}",
   "markdown-image.base.altFormat": "${mdname}",
   "markdown-image.local.path": "assets",
   "workbench.editorAssociations": {
-    "*.md": "default"
+    "*.bat": "default",
+    "*.html": "default"
   },
   "window.menuBarVisibility": "compact",
-  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
-  "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.activeIconPack": "none",
-  "C_Cpp.vcFormat.space.aroundAssignmentOperator": "ignore",
   "C_Cpp.vcFormat.indent.withinParentheses": "alignToParenthesis",
   "C_Cpp.vcFormat.space.aroundBinaryOperator": "ignore",
-  "C_Cpp.codeAnalysis.runAutomatically": false,
-  "editor.formatOnSave": true,
   "html.format.wrapLineLength": 0,
   "C_Cpp.vcFormat.space.pointerReferenceAlignment": "right",
   "leetcode.endpoint": "leetcode-cn",
@@ -106,7 +100,8 @@
   "leetcode.editor.shortcuts": [
     "submit",
     "test",
-    "description"
+    "description",
+    "solution"
   ],
   "leetcode.hint.configWebviewMarkdown": false,
   "leetcode.showDescription": "Both",
@@ -124,15 +119,45 @@
   "extensions.autoUpdate": false,
   "leetcode.hint.commandShortcut": false,
   "editor.comments.ignoreEmptyLines": false,
-  "C_Cpp.vcFormat.indent.preserveComments": true,
   "leetcode.codeTemplate": "#include \"../head-file.h\"\n${code}\nint main() {\n    Solution s;\n    return 0;\n}",
-  "markdown-preview-enhanced.enableLinkify": false,
   "editor.formatOnType": true,
   "files.autoSave": "afterDelay",
   "editor.acceptSuggestionOnEnter": "off",
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "java.inlayHints.parameterNames.enabled": "none",
-  "java.debug.settings.enableRunDebugCodeLens": false,
-  "workbench.colorTheme": "Visual Studio Dark",
   "workbench.panel.defaultLocation": "right",
+  "C_Cpp.vcFormat.space.aroundAssignmentOperator": "ignore",
+  "C_Cpp.vcFormat.space.beforeInitializerListOpenBrace": true,
+  "C_Cpp.vcFormat.newLine.beforeElse": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "markdown.preview.doubleClickToSwitchToEditor": false,
+  "vim.cursorStylePerMode.insert": "block",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.replace": "block",
+  "vim.cursorStylePerMode.visual": "block",
+  "vim.cursorStylePerMode.visualblock": "block",
+  "vim.cursorStylePerMode.visualline": "block",
+  "Codegeex.Privacy": false,
+  "Codegeex.EnableExtension": false,
+  "tabnine.experimentalAutoImports": true,
+  "chatgpt.lang": "cn",
+  "window.customMenuBarAltFocus": false,
+  "editor.fontFamily": "Consolas",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.accessibilityPageSize": 50,
+  "editor.accessibilitySupport": "off",
+  "editor.minimap.enabled": false,
+  "workbench.editor.untitled.hint": "hidden",
+  "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
+  "C_Cpp.intelliSenseUpdateDelay": 1000,
+  "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+  "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": false,
+  "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": false,
+  "C_Cpp.vcFormat.indent.preserveComments": true,
+  "hexeditor.columnWidth": 26,
+  "hexeditor.showDecodedText": true,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside",
+  "workbench.colorTheme": "Visual Studio Dark",
+  "material-icon-theme.folders.theme": "classic",
+  "extensions.autoCheckUpdates": false,
 }
