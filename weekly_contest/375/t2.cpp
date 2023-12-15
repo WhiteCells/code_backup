@@ -13,20 +13,12 @@ public:
         for (int i = 0; i < variables.size(); ++i) {
             int a = variables[i][0], b = variables[i][1],
                 c = variables[i][2], m = variables[i][3];
-            printf("%d\n", (int)pow(a, b));
-            printf("%d\n", (int)pow(a, b) % 10);
-            printf("%d\n", (int)pow((int)pow(a, b) % 10, c));
-            printf("%d\n", (int)pow((int)pow(a, b) % 10, c) % m);
             a %= 10;
             b %= 4;
             if (b == 0) {
                 b = 4;
             }
             c %= m;
-            printf("%d\n", (int)pow(a, b));
-            printf("%d\n", (int)pow(a, b) % 10);
-            printf("%d\n", (int)pow((int)pow(a, b) % 10, c));
-            printf("%d\n", (int)pow((int)pow(a, b) % 10, c) % m);
             if ((int)pow((int)pow(a, b) % 10, c) % m == target) {
                 res.push_back(i);
             }

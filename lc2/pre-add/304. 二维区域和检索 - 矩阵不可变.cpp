@@ -44,27 +44,18 @@ url: https://leetcode.cn/problems/range-sum-query-2d-immutable/description/
 class NumMatrix {
 public:
     NumMatrix(vector<vector<int>> &matrix) {
-        pre.assign(matrix.size(), vector<int>(matrix[0].size()));
-        pre[0][0] = matrix[0][0];
-        tmp = move(matrix);
-        for (int j = 1; j < tmp[0].size(); ++j) {
-            pre[0][j] = tmp[0][j] + pre[0][j - 1];
-        }
-        for (int i = 1; i < tmp.size(); ++i) {
-            pre[i][0] = tmp[i][0] + pre[i - 1][0];
-        }
-        for (int i = 1; i < tmp.size(); ++i) {
-            for (int j = 1; j < tmp[0].size(); ++j) {
-                pre[i][j] = tmp[i][j] + pre[i - 1][j] + pre[i][j - 1] - pre[i - 1][j - 1];
+        pre.resize(matrix.size() + 1, vector<int>(matrix[0].size() + 1));
+        for (int i = 0; i < matrix.size(); ++i) {
+            for (int j = 0; j < matrix[0].size(); ++j) {
+                pre[i + 1][j + 1] = pre[i][j + 1] + pre[i + 1][j] - pre[i][j] + matrix[i][j];
             }
         }
     }
 
     int sumRegion(int row1, int col1, int row2, int col2) {
-        return pre[row2][col2] + pre[row1][col1] - pre[row1][col2] - pre[row2][col1];
+        return pre[row2 + 1][col2 + 1] - pre[row1][col2 + 1] - pre[row2 + 1][col1] + pre[row1][col1];
     }
 private:
-    vector<vector<int>> tmp;
     vector<vector<int>> pre;
 };
 

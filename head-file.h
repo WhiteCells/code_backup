@@ -1,3 +1,6 @@
+#ifndef _HEAD_FILE_H_
+#define _HEAD_FILE_H_
+
 #include <iostream>
 
 #include <algorithm>
@@ -40,3 +43,5 @@
 // #include <bits/stdc++.h>
 
 using namespace std;
+
+#endif // _HEAD_FILE_H_
