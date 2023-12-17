@@ -1,4 +1,4 @@
-#include "D:/distake/Coding/head-file.h"
+#include "../../head-file.h"
 
 /*
  * @Author: WhiteCells
