@@ -1,6 +1,4 @@
 {
-  "update.enableWindowsBackgroundUpdates": false,
-  "update.showReleaseNotes": false,
   "editor.fontSize": 18,
   "C_Cpp.default.compilerPath": "D:/MinGW/mingw64/bin/g++.exe",
   "C_Cpp.default.cStandard": "c17",
@@ -58,8 +56,6 @@
   },
   "C_Cpp.vcFormat.indent.caseLabels": true,
   "C_Cpp.vcFormat.indent.lambdaBracesWhenParameter": false,
-  "update.mode": "none",
-  "editor.minimap.renderCharacters": false,
   "workbench.colorCustomizations": {
     "statusBar.background": "#222222",
     "statusBar.debuggingBackground": "#222222",
@@ -74,7 +70,6 @@
   "markdown.preview.scrollPreviewWithEditor": false,
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "markdown.preview.fontSize": 18,
-  "workbench.layoutControl.enabled": false,
   "editor.tokenColorCustomizations": {
     "comments": {
       // "fontStyle": "italic",
@@ -88,7 +83,6 @@
     "*.bat": "default",
     "*.html": "default"
   },
-  "window.menuBarVisibility": "compact",
   "material-icon-theme.activeIconPack": "none",
   "C_Cpp.vcFormat.indent.withinParentheses": "alignToParenthesis",
   "C_Cpp.vcFormat.space.aroundBinaryOperator": "ignore",
@@ -120,7 +114,6 @@
   "leetcode.hint.commandShortcut": false,
   "editor.comments.ignoreEmptyLines": false,
   "leetcode.codeTemplate": "#include \"../head-file.h\"\n${code}\nint main() {\n    Solution s;\n    return 0;\n}",
-  "editor.formatOnType": true,
   "files.autoSave": "afterDelay",
   "editor.acceptSuggestionOnEnter": "off",
   "terminal.integrated.defaultProfile.linux": "zsh",
@@ -145,8 +138,6 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.accessibilityPageSize": 50,
   "editor.accessibilitySupport": "off",
-  "editor.minimap.enabled": false,
-  "workbench.editor.untitled.hint": "hidden",
   "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
   "C_Cpp.intelliSenseUpdateDelay": 1000,
   "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
@@ -157,7 +148,37 @@
   "hexeditor.showDecodedText": true,
   "hexeditor.defaultEndianness": "little",
   "hexeditor.inspectorType": "aside",
-  "workbench.colorTheme": "Visual Studio Dark",
   "material-icon-theme.folders.theme": "classic",
   "extensions.autoCheckUpdates": false,
+  "[cmake]": {
+  },
+  "cmake.showOptionsMovedNotification": false,
+  "cmake.configureOnOpen": true,
+  "workbench.editor.empty.hint": "hidden",
+  "update.mode": "none",
+  "update.showReleaseNotes": false,
+  "update.enableWindowsBackgroundUpdates": false,
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "extensions.ignoreRecommendations": true,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "editor.dragAndDrop": false,
+
+  // background
+  "background.fullscreen": {
+    "images": [
+      "file:///C:/Users/Xuan/Pictures/wallpaper/wall1.png"
+    ],
+    "opacity": 0.9,
+    "size": "cover",
+    "position": "center",
+  },
+
+  
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.enabled": false,
+  "window.autoDetectHighContrast": false,
+  "editor.formatOnType": true
 }
