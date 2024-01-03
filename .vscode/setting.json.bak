@@ -144,7 +144,7 @@
   "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": false,
   "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": false,
   "C_Cpp.vcFormat.indent.preserveComments": true,
-  "hexeditor.columnWidth": 26,
+  "hexeditor.columnWidth": 19,
   "hexeditor.showDecodedText": true,
   "hexeditor.defaultEndianness": "little",
   "hexeditor.inspectorType": "aside",
@@ -160,9 +160,7 @@
   "update.enableWindowsBackgroundUpdates": false,
   "window.menuBarVisibility": "compact",
   "window.commandCenter": false,
-  "workbench.layoutControl.enabled": false,
   "extensions.ignoreRecommendations": true,
-  "workbench.colorTheme": "Visual Studio Dark",
   "editor.dragAndDrop": false,
 
   // background
@@ -172,7 +170,8 @@
     ],
     "opacity": 0.9,
     "size": "cover",
-    "position": "center",
+    // "position": "center",
+    "position": "absolute",
   },
 
   
@@ -180,5 +179,12 @@
   "editor.minimap.renderCharacters": false,
   "editor.minimap.enabled": false,
   "window.autoDetectHighContrast": false,
-  "editor.formatOnType": true
+  "editor.formatOnType": true,
+  "workbench.layoutControl.enabled": false,
+  "terminal.integrated.enablePersistentSessions": false,
+  "C_Cpp.vcFormat.newLine.beforeCatch": false,
+  "background.enabled": false,
+  "explorer.compactFolders": false,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "debug.onTaskErrors": "showErrors",
 }
