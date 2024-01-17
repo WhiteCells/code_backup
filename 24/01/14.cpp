@@ -77,8 +77,8 @@ void destructList(ListNode *&head) {
 }
 
 int main() {
-    // vector<int> v {1, 2, 3, 3, 4, 4, 5};
-    vector<int> v {1, 1};
+    vector<int> v {1, 2, 3, 3, 4, 4, 5};
+    // vector<int> v {1, 1};
     ListNode *head = nullptr;
     initList(head, v);
     printList(head);
@@ -87,5 +87,6 @@ int main() {
     printList(res);
 
     destructList(head);
+    destructList(res);
     return 0;
 }
