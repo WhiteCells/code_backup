@@ -10,7 +10,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${workspaceFolder}\\output.exe"
+                "${workspaceFolder}\\output.exe",
             ],
             "options": {
                 "cwd": "D:\\mingw64\\bin"
