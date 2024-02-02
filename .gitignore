@@ -1,4 +1,5 @@
-output.exe
-debug.cpp
 /ztest
 /test-project
+
+output.exe
+output
