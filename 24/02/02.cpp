@@ -8,7 +8,7 @@ url:
 
 class Solution {
 public:
-    vector<int> numsGame(vector<int>& nums) {
+    vector<int> numsGame(vector<int> &nums) {
         int n = nums.size();
         vector<int> res(n);
         priority_queue<int> lower;
