@@ -1,4 +1,6 @@
 # vscode config
+.vscode.windows
+.vscode.linux
 .vscode
 
 # test
