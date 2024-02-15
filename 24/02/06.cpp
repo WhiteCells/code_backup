@@ -3,7 +3,7 @@
 /*
 problme:
 
-url:
+url: https://leetcode.cn/problems/p0NxJO/description
  */
 
 class Solution {
